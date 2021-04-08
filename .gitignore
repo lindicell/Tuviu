@@ -3,7 +3,6 @@
 
 # Node
 node_modules/
-.npmrc
 
 # Project specific
 config/database.js
@@ -31,5 +30,5 @@ target/
 .env
 
 package-lock.json
-bash.exe.stackdump
-.npmrc
+
+.vscode/settings.json
