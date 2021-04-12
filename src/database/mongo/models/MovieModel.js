@@ -5,42 +5,58 @@ const paginate = require('mongoose-paginate-v2');
 module.exports = ({ providerConnection }) => {
     const connection = providerConnection.connection;
 
-    const drugSchema = new Schema({
-        name: {
+    const movieSchema = new Schema({
+        title: {
             type: String,
             required: true
         },
-        mg: {
-            type: Number,
-            required: true
-        },
-        price: {
-            type: Number,
-            required: true
-
-        },
-        pill_number: {
-            type: Number,
-            required: true
-
-        },
-        manufacturer: {
+        subtitle: {
             type: String,
             required: true
-
         },
-        generic: {
-            type: Boolean,
-            required: true
-        },
-        expiration_date: {
+        synopsis: {
             type: String,
             required: true
-
+        },
+        movie_genre: {
+            type: Object,
+            required: true
+        },
+        cast: {
+            type: Object,
+            required: true
+        },
+        languages: {
+            type: Object,
+            required: true
+        },
+        creation_year: {
+            type: Date,
+            required: true
+        },
+        published_date: {
+            type: Date,
+            required: true
+        },
+        author: {
+            type: String,
+            required: true
+        },
+        subtitles: {
+            type: String,
+            required: true
+        },
+        time: {
+            type: String,
+            required: true
+        },
+        stars: {
+            type: Number,
+            required: true
         }
     }, { versionKey: false });
 
-    drugSchema.plugin(paginate);
+    movieSchema.plugin(paginate);
 
-    return connection.model('drug', drugSchema);
+    return connection.model('movie', movieSchema);
 };

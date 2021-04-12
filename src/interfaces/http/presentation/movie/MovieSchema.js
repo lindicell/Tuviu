@@ -3,18 +3,34 @@ const joi = require('@hapi/joi')
 
 module.exports = () => ({
     createMovie: joi.object().keys({
-        name: joi.string().required(),
+        title: joi.string().required(),
+        subtitle: joi.string().required(),
+        synopsis: joi.string().required(),
         movie_genre: joi.array().items(
             joi.string().required()
         ).required(),
+        cast: joi.array().items({
+            actor: joi.string(),
+            actress: joi.string(),
+        }).required(),
+        languages: joi.array().items({
+            language: joi.string().required(),
+            country: joi.string().required(),
+        }).required(),
         creation_year: joi.date().format('YYYY').options({ convert: true }).raw().required(),
         published_date: joi.date().format('DD/MM/YYYY').options({ convert: true }).raw().required(),
         author: joi.string().required(),
+        subtitles: joi.boolean().required(),
+        time: joi.string().regex(/(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/i).required(),
         stars: joi.number().max(5).default(0)
     }),
-    // getMovieByName: joi.object().keys({
-    //     name: joi.string().required()
-    // }),
+    searchMovie: Object.freeze(
+        joi.object()
+            .keys({
+                title: joi.alternatives().try(joi.array().items(joi.string()), joi.string())
+            })
+            .required()
+    )
     // updateMovie: joi.object().keys({
     //     name: joi.string(),
     //     profession: joi.string(),

@@ -25,13 +25,21 @@ module.exports = ({ container }) => {
             },
             handler: ctx.movieController.createMovie
         },
-        // {
-        //     method: 'get',
-        //     path: '/',
-        //     validation: {
-        //     },
-        //     handler: ctx.movieController.getMovieByName
-        // },
+        {
+            method: 'get',
+            path: '/',
+            validation: {
+            },
+            handler: ctx.movieController.getAllMovies
+        },
+        {
+            method: 'get',
+            path: '/search',
+            validation: {
+                query: ctx.movieSchema.searchMovie,
+            },
+            handler: ctx.movieController.searchMovie
+        },
         // {
         //     method: 'get',
         //     path: '/:name',
@@ -41,7 +49,7 @@ module.exports = ({ container }) => {
         //     handler: ctx.movieController.getPersonByName
         // },
         // {
-        //     method: 'put',
+        //     method: 'put', delete
         //     path: '/:name',
         //     validation: {
         //         params: ctx.movieSchema.getByName,
