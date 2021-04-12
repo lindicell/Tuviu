@@ -1,7 +1,12 @@
-module.exports = (
-    /*{ personService, exception } */
-) => ({
+module.exports = ({ movieService, exception }) => ({
     execute: async body => {
-        return body;
+        const { title } = body;
+        //andrei
+        const movie = await movieService.getMovieByName(title);
+
+        if (movie)
+            throw exception.duplicateKeyError('duplicateKeyError', 'movie_already_exist', [`Movie "${title}" already exists`]);
+
+        return await movieService.createMovie(body);
     }
 });
