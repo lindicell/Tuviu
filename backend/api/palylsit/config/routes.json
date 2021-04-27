@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/palylsits",
+      "handler": "palylsit.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/palylsits/count",
+      "handler": "palylsit.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/palylsits/:id",
+      "handler": "palylsit.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/palylsits",
+      "handler": "palylsit.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/palylsits/:id",
+      "handler": "palylsit.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/palylsits/:id",
+      "handler": "palylsit.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

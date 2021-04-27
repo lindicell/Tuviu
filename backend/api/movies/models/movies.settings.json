@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "name": "movie",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "genres": {
+      "collection": "genre"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "synopsis": {
+      "type": "text",
+      "required": true
+    },
+    "creation_year": {
+      "type": "date",
+      "required": true
+    },
+    "published_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "subtitles": {
+      "type": "boolean",
+      "default": false
+    },
+    "time": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "stars": {
+      "type": "decimal",
+      "required": true,
+      "max": 10
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "languages": {
+      "collection": "language"
+    },
+    "actors": {
+      "collection": "actor"
+    }
+  }
+}
