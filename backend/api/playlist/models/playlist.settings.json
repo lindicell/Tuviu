@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "playlists",
+  "info": {
+    "name": "playlist"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "movies": {
+      "collection": "movies"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "playlist_cover": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "playlist_display": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

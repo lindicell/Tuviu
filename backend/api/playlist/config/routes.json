@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/alunos",
-      "handler": "alunos.find",
+      "path": "/playlists",
+      "handler": "playlist.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/alunos/count",
-      "handler": "alunos.count",
+      "path": "/playlists/count",
+      "handler": "playlist.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/alunos/:id",
-      "handler": "alunos.findOne",
+      "path": "/playlists/:id",
+      "handler": "playlist.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/alunos",
-      "handler": "alunos.create",
+      "path": "/playlists",
+      "handler": "playlist.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/alunos/:id",
-      "handler": "alunos.update",
+      "path": "/playlists/:id",
+      "handler": "playlist.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/alunos/:id",
-      "handler": "alunos.delete",
+      "path": "/playlists/:id",
+      "handler": "playlist.delete",
       "config": {
         "policies": []
       }
