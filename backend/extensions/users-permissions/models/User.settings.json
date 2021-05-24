@@ -61,6 +61,9 @@
     },
     "genres": {
       "collection": "genre"
+    },
+    "playlists": {
+      "collection": "playlist"
     }
   }
 }
