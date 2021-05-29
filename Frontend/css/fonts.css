@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('../assets/fonts/NotoSans-Regular.ttf')/*Para navegadores Internet Explorer*/;
+	font-weight: normal;
+	font-style: normal;
+}
