@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+.navbar-brand {
+	text-align: left;
+}
+
+.main-panel-app {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--primary);
+	color: white;
+	margin: 2rem 0px 4rem 0px;
+}
+
+.main-title {
+	font-size: 2.25rem;
+	font-weight: 400;
+	line-height: 5rem;
+	margin: 3rem 2rem;
+}
+
+.main-panel-content {
+	background-color: var(--secondary);
+	margin: 0px 4rem 4rem;
+	padding: 2rem;
+	color: var(--primary);
+}
+
+.main-content-title {
+	font-size: 2.5rem;
+	line-height: 3.375rem;
+	text-align: center;
+}
+
+.dashboard {
+	display: flex;
+	padding: 2rem 0px;
+	width: 100%;
+}
+
+.dashboard-info {
+	padding: 0px 2rem;
+	width: 100%;
+}
+
+.dashboard-title {
+	font-size: 2.25rem;
+	font-weight: 400;
+	line-height: 5rem;
+}
+
+.dashboard-menu-bar {
+	padding: 0px 2rem;
+}
+
+.btn-dashboard {
+	display: block;
+	width: 15rem;
+	height: 11rem;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+
+.btn-dashboard i {
+	width: 100%;
+	font-size: 2rem;
+	margin-bottom: 2.5rem;
+}
+
+.btn-dashboard:not(:last-of-type) {
+	margin-bottom: 2rem;
+}
+
+.info-card {
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 2rem;
+
+	background: #FDFDFF;
+	border: 1px solid #EBEBEB;
+	box-sizing: border-box;
+	border-radius: 13px;
+	color: var(--primary);
+}
+
+.info-card:not(:last-of-type) {
+	margin-right: 2rem;
+}
+
+.info-card-title {
+	color: #4F4F4F;
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.info-card-data {
+	color: black;
+	font-size: 1.25rem;
+}
+
+.bluetooth-button {
+	width: 200px;
+	height: 200px;
+	border: none;
+	background: #327EEF;
+	border-radius: 50%;
+	color: white;
+	
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.bluetooth-button-circle {
+	width: 174.87px;
+	height: 174.87px;
+	border-radius: 50%;
+	margin: auto;
+	display: flex;
+
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	box-sizing: border-box;
+	filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12));
+}
+
+.bluetooth-button img {
+	margin: auto;
+}
+
+.info-box {
+	color: white;
+	background-color: var(--primary);
+	padding: 1.25rem;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.info-box:not(:last-of-type) {
+	margin-bottom: 1rem;
+}
