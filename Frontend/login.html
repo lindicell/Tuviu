@@ -124,11 +124,10 @@
         });
 
         if (!login.error) {
-          alert(`login efetuado com sucesso ${JSON.stringify(login)}`);
+          window.location = "home.html";
         } else {
           alert(`${JSON.stringify(login.message[0].messages[0].message)}`);
         }
-
       }
     </script>
   </body>
