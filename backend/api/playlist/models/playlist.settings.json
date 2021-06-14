@@ -42,6 +42,10 @@
     },
     "is_public": {
       "type": "boolean"
+    },
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
     }
   }
 }
