@@ -35,7 +35,8 @@
             <h6>Que bom que você voltou! :D</h6>
             <hr />
             <br />
-            <form onsubmit="return logar(document.getElementById('email').value, document.getElementById('senha').value, event)">
+            <form
+              onsubmit="return logar(document.getElementById('email').value, document.getElementById('senha').value, event)">
               <div class="form-group row col-12 col-sm-8 col-md-6">
                 <input type="text" class="form-control" id="email" placeholder="Insira seu usuário ou email" />
               </div>
@@ -49,7 +50,7 @@
             <br /><br /><br />
             <h6>
               Ainda não possui uma conta?
-              <a><strong><ins>Cadastre-se.</ins></strong></a>
+              <a href="cadastrar.html"><strong><ins>Cadastre-se.</ins></strong></a>
             </h6>
           </div>
         </div>
@@ -58,33 +59,40 @@
   </main>
   <footer style="background-color: #333333"></footer>
 
-<<<<<<< HEAD
-  <!-- Optional JavaScript; choose one of the two! -->
+  <<<<<<< HEAD <!-- Optional JavaScript; choose one of the two! -->
 
-  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
-  <script src="js/jquery-1.4.2.min.js"></script>
-  <script src="js/mascara.min.js"></script>
-  <script src="js/geral.js"></script>
-  <script>
-    async function logar(email, senha, e) {
-      e.preventDefault();
-      const login = await UserStore.login({
-        identifier: email,
-        password: senha,
-      });
-      if (!login.error) {
-        //alert(`login efetuado com sucesso ${JSON.stringify(login)}`);
-        window.location = 'home.html';
-      } else {
-        alert(`${JSON.stringify(login.message[0].messages[0].message)}`);
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <script src="js/mascara.min.js"></script>
+    <script src="js/geral.js"></script>
+    <script>
+      async function logar(email, senha, e) {
+        e.preventDefault();
+        const login = await UserStore.login({
+          identifier: email,
+          password: senha,
+        });
+        if (!login.error) {
+          //alert(`login efetuado com sucesso ${JSON.stringify(login)}`);
+          alert('Login Efetuado com sucesso!');
+          window.location = 'home.html';
+        } else {
+          //alert(`${JSON.stringify(login.message[0].messages[0].message)}`);
+          alert('Usuário / Senha Inválido!');
+        }
+        return false;
       }
-      return false;
-    }
-  </script>
+    </script>
+    <script>
+      async function cadastrar(nome, email, senha, sexo, generoFav, e) {
+        e.preventDefault();
+        window.location = 'cadastrar.html';
+      }
+    </script>
 </body>
 
 </html>
