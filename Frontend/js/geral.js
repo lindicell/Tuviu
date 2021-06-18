@@ -157,6 +157,10 @@ const UserStore = {
 
 		const json = await req.json();
 		return json;
+	},
+
+	cadastrar: async (form) => {
+		console.log(JSON.stringify(form));
 	}
 }
 
