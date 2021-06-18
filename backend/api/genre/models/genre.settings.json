@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genre",
+  "info": {
+    "name": "genre"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tag": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

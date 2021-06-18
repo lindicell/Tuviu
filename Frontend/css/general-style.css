@@ -112,7 +112,7 @@ ul {
 
 
 .movie-card {
-	background: #ffffff;
+	background: #080808;
 	box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
 	width: 100%;
 	max-width: 315px;
@@ -120,6 +120,7 @@ ul {
 	border-radius: 10px;
 	display: inline-block;
   }
+
   
   .movie-header {
 	padding: 0;
@@ -151,6 +152,11 @@ ul {
 	background: url("http://cdn.collider.com/wp-content/uploads/2017/05/blade-runner-2049-poster-ryan-gosling.jpeg");
 	background-size: cover;
 	background-position: 100% 80%;
+  }
+  
+  .batmanBegins {
+	background: url("https://static.wikia.nocookie.net/dublagempedia/images/b/b4/Batman_begins_nordic-13543929-frntl.jpg/revision/latest/top-crop/width/360/height/450?cb=20180404203642&path-prefix=pt-br");
+	background-size: cover;
   }
   
   .header-icon-container {
