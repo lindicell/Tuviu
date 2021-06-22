@@ -159,8 +159,21 @@ const UserStore = {
 		return json;
 	},
 
-	cadastrar: async (form) => {
-		console.log(JSON.stringify(form));
+	cadastrar: async (data) => {
+		const BASE_API = 'http://localhost:1337';
+
+		const req = await fetch(`${BASE_API}/users`, {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		});
+
+		const json = await req.json();
+		console.log(json)
+		return json;
 	}
 }
 
