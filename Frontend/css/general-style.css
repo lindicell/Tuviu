@@ -120,6 +120,7 @@ ul {
 	border-radius: 10px;
 	display: inline-block;
   }
+
   
   .movie-header {
 	padding: 0;
@@ -168,12 +169,13 @@ ul {
 	background-repeat: no-repeat;
 	background-size: 160px 200px;
   }
-  
+
   .barbie {
 	background: url("https://upload.wikimedia.org/wikipedia/pt/d/d7/Barbie_Rapunzel.jpg");
 	background-repeat: no-repeat;
 	background-size: 160px 200px;
   }
+
   .header-icon-container {
 	position: relative;
   }

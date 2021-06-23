@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "language",
+  "info": {
+    "name": "language"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "language": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
