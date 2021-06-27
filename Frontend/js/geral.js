@@ -1,5 +1,7 @@
 // JavaScript Document
 var $z = jQuery.noConflict();
+const BASE_API = 'https://tuviu.herokuapp.com';
+
 $z(document).ready(function () {
 	var contextFontResize = "html";
 
@@ -144,8 +146,6 @@ const UserStore = {
 	},
 
 	login: async (data) => {
-		const BASE_API = 'http://localhost:1337';
-
 		const req = await fetch(`${BASE_API}/auth/local`, {
 			method: 'POST',
 			headers: {
@@ -160,8 +160,6 @@ const UserStore = {
 	},
 
 	cadastrar: async (data) => {
-		const BASE_API = 'http://localhost:1337';
-
 		const req = await fetch(`${BASE_API}/users`, {
 			method: 'POST',
 			headers: {
@@ -172,7 +170,6 @@ const UserStore = {
 		});
 
 		const json = await req.json();
-		console.log(json)
 		return json;
 	}
 }
