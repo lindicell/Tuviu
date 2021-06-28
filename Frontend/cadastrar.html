@@ -65,22 +65,14 @@
               <h6>Preencha o formulário a seguir para se cadastrar</h6>
               <hr />
               <br />
-              <form onsubmit="cadastrar(event,this)">
+              <form onsubmit="cadastrar(event)">
                 <div class="form-group row col-12 col-sm-8 col-md-6 pt-3">
                   <input
                     name="nome"
                     type="text"
                     class="form-control"
                     id="nome"
-                    placeholder="Insira seu nome"
-                  />
-                </div>
-                <div class="form-group row col-12 col-sm-8 col-md-6 pt-3">
-                  <input
-                    type="file"
-                    name="arquivo"
-                    class="form-control"
-                    id="test"
+                    placeholder="Insira seu nome de usuário"
                   />
                 </div>
                 <div class="form-group row col-12 col-sm-8 col-md-6 pt-3">
@@ -104,19 +96,19 @@
                 <div class="form-group row col-12 col-sm-8 col-md-6 pt-3">
                   <select name="sexo" class="form-control" id="sexo">
                     <option value="volvo">Selecione o sexo</option>
-                    <option value="volvo">Feminino</option>
-                    <option value="saab">Masculino</option>
-                    <option value="opel">Prefiro não responder</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Não informado">Prefiro não responder</option>
                   </select>
                 </div>
                 <div class="form-group row col-12 col-sm-8 col-md-6 pt-3">
                   <select name="genero" class="form-control" id="genero">
                     <option value="volvo">Genêro de filme preferido</option>
-                    <option value="1">Ação</option>
-                    <option value="2">Conédia</option>
-                    <option value="3">Drama</option>
-                    <option value="4">Fantasia</option>
-                    <option value="5">Terror</option>
+                    <option value="1">Aventura</option>
+                    <option value="2">Ação</option>
+                    <option value="3">Terror</option>
+                    <option value="4">Comédia</option>
+                    <option value="5">Ficção Científica</option>
                   </select>
                 </div>
                 <br />
@@ -165,11 +157,25 @@
     <script src="js/mascara.min.js"></script>
     <script src="js/geral.js"></script>
     <script>
-      function cadastrar(e, _this) {
+      async function cadastrar(e) {
         e.preventDefault();
-        const iterator = new FormData(_this).values();
-        for (let i of iterator) {
-          console.log(i);
+
+        const request = {
+          username: document.getElementById("nome").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("senha").value,
+          sexo: document.getElementById("sexo").value,
+          genres: [
+            parseInt(document.getElementById("genero").value)
+          ]
+        };
+
+        const cadastrar = await UserStore.cadastrar(request);
+        if (!cadastrar.error) {
+          alert('Cadastro efetuado com sucesso!');
+          window.location = 'home.html';
+        } else {
+          alert(`${cadastrar.error}: Informe todos os campos ou usuário já existe, por favor revise seu username e email.`);
         }
       }
     </script>
