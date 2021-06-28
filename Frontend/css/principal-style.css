@@ -78,8 +78,7 @@
 	width: 100%;
 	padding: 1rem;
 	margin-bottom: 2rem;
-
-	background: #FDFDFF;
+	background: #333333;
 	border: 1px solid #EBEBEB;
 	box-sizing: border-box;
 	border-radius: 13px;
@@ -101,32 +100,7 @@
 	font-size: 1.25rem;
 }
 
-.bluetooth-button {
-	width: 200px;
-	height: 200px;
-	border: none;
-	background: #327EEF;
-	border-radius: 50%;
-	color: white;
-	
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
 
-.bluetooth-button-circle {
-	width: 174.87px;
-	height: 174.87px;
-	border-radius: 50%;
-	margin: auto;
-	display: flex;
-
-	border: 2px solid rgba(255, 255, 255, 0.7);
-	box-sizing: border-box;
-	filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12));
-}
-
-.bluetooth-button img {
-	margin: auto;
-}
 
 .info-box {
 	color: white;

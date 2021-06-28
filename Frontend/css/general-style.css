@@ -340,12 +340,27 @@ ul {
 
 
 .card-body {
-	padding: 2rem 0px;
+	background-image: url('https://sm.ign.com/ign_br/review/j/joker-revi/joker-review_fpk2.jpg');
+    background-repeat: no-repeat;
+    background-size:120%;
+}
+
+.filme2 {
+	background-image: url('https://img.r7.com/images/oscar-2021-soul-animacao-25042021222659769?dimensions=771x420');
+    background-repeat: no-repeat;
+    background-size:120%;
+}
+
+.filme3{
+	background-image: url('https://media.glamour.com/photos/5ec2e91dccfbc8c1a8fe8cbf/master/w_3000,h_2032,c_limit/MSDTITA_FE057.jpg');
+    background-repeat: no-repeat;
+    background-size:120%;
 }
 
 .card-title {
 	margin-bottom: 3.5rem;
-	font-weight: 500;
+	font-weight: 1000;
+	color: var(--secondary);
 }
 
 .card-text {
@@ -543,6 +558,9 @@ footer {
 	margin-left: .5rem;
 }
 
+.select{
+	color: var(--secondary);
+}
 .accessible-actions .btn-dark:hover {
 	box-shadow: 0 0 0 2px white, 0 0 0 4px black;
 }
