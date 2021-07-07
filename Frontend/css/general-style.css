@@ -110,6 +110,20 @@ ul {
     width: 75%;         /* to prevent overflow of nav items for demo */
 }
 
+.profile-header {
+	background:var(--primary) ;
+	text-align: center;
+	color:var(--secondary);
+	padding: 30px;
+  }
+  .profile-header img {
+	height:150px;
+	width:150px;
+  }
+  .profile-details {
+	padding:20px 20px 30px;
+  }
+
 
 .movie-card {
 	background: var(--primary);
