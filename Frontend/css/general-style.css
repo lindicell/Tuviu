@@ -189,6 +189,22 @@ ul {
 	background-repeat: no-repeat;
 	background-size: 160px 200px;
   }
+  .esquadrao {
+	background: url("https://upload.wikimedia.org/wikipedia/pt/thumb/2/2c/Suicide_Squad.jpg/230px-Suicide_Squad.jpg");
+	background-repeat: no-repeat;
+	background-size: 160px 200px;
+  }
+  .aves{
+	background: url("https://br.web.img2.acsta.net/c_310_420/pictures/19/09/17/19/29/5316438.jpg");
+	background-repeat: no-repeat;
+	background-size: 160px 200px;
+  }
+
+  .retorno{
+	background: url("https://upload.wikimedia.org/wikipedia/pt/thumb/8/83/Batman_returns_poster2.jpg/225px-Batman_returns_poster2.jpg");
+	background-repeat: no-repeat;
+	background-size: 160px 200px;
+  }
 
   .header-icon-container {
 	position: relative;
@@ -259,9 +275,17 @@ ul {
 
 .btn-warning{
 	border-radius: 25px;
-	padding: 10px 55px;
+	padding: 10px 30px;
 	margin-top: 5px;
-	font-size: 20px;
+	font-size: 15px;
+	text-align: center;
+	vertical-align: middle;
+}
+.btn-success{
+	border-radius: 25px;
+	padding: 10px 30px;
+	margin-top: 5px;
+	font-size: 15px;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -271,9 +295,12 @@ ul {
 .fa-plus{
 	color: var(--primary);
 }
-.fa-eye{
+.fa-window-minimize{
 	color: var(--primary);
+
 }
+
+
 .btn-primary {
 	background-color: var(--secondary);
 	border-color: var(--secondary);
